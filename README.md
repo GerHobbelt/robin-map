@@ -122,7 +122,7 @@ All methods are not documented yet, but they replicate the behavior of the ones 
 #include <tsl/robin_map.h>
 #include <tsl/robin_set.h>
 
-int main() {
+int main(void) {
     tsl::robin_map<std::string, int> map = {{"a", 1}, {"b", 2}};
     map["c"] = 3;
     map["d"] = 4;
@@ -249,7 +249,7 @@ struct hash_employee {
 };
 
 
-int main() {
+int main(void) {
     // Use std::equal_to<> which will automatically deduce and forward the parameters
     tsl::robin_map<employee, int, hash_employee, std::equal_to<>> map; 
     map.insert({employee(1, "John Doe"), 2001});
@@ -366,7 +366,7 @@ private:
 };
 
 
-int main() {
+int main(void) {
     const tsl::robin_map<std::int64_t, std::int64_t> map = {{1, -1}, {2, -2}, {3, -3}, {4, -4}};
     
     
@@ -439,7 +439,7 @@ namespace boost { namespace serialization {
 }}
 
 
-int main() {
+int main(void) {
     tsl::robin_map<std::int64_t, std::int64_t> map = {{1, -1}, {2, -2}, {3, -3}, {4, -4}};
     
     
